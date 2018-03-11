@@ -1,0 +1,7 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-transparent: rgba(var(--color-white), 0);
+
+  --font-family-default: 'Myriad Pro', Helvetica, Arial, sans-serif;
+}

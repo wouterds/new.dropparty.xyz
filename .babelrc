@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "env",
+    "flow",
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-function-bind",
+    "transform-class-properties",
+    [
+      "module-resolver", {
+        "root": ["./src"]
+      }
+    ]
+  ]
+}
