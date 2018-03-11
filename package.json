@@ -2,6 +2,8 @@
   "name": "dropparty-website",
   "version": "0.0.1",
   "scripts": {
+    "ssr": "NODE_ENV=production ./node_modules/.bin/webpack --mode production --colors --config webpack.config.ssr.babel.js",
+    "start:ssr": "./node_modules/.bin/babel-node ./server",
     "dev": "./node_modules/.bin/webpack --mode development --watch --colors",
     "hot": "./node_modules/.bin/webpack-dev-server --mode development --open --hot --inline --colors",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --mode production --progress --colors"
@@ -47,6 +49,7 @@
     "url-loader": "^0.6.2",
     "webpack": "^4.1.0",
     "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0"
+    "webpack-dev-server": "^3.1.0",
+    "webpack-node-externals": "^1.6.0"
   }
 }
