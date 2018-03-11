@@ -67,6 +67,7 @@ let config =  {
     ],
   },
   plugins: [
+    new FlowBabelWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, './public/index.html'),
       template: path.join(__dirname, './src/index.html'),
@@ -82,8 +83,13 @@ let config =  {
   },
 };
 
-if (!production) {
-  config.plugins.push(new FlowBabelWebpackPlugin());
+// Unwanted production plugins
+if (production) {
+  config.plugins = config.plugins.filter((plugin) => {
+    return !(
+      plugin instanceof FlowBabelWebpackPlugin
+    );
+  });
 }
 
 module.exports = config;
