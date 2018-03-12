@@ -15,7 +15,12 @@ class Landing extends Component<{}>
   render(): Node {
     return (
       <div className={styles.landing}>
+        <p>
+          Drop Party makes it easy to quickly share any file with anyone.
+          It can auto-upload screenshots, has support for short urls and full social media embedding support.
+        </p>
 
+        <p>There's no sign up, you can use your existing Dropbox account to use this service.</p>
       </div>
     );
   }
