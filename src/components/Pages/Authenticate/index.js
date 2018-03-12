@@ -5,9 +5,14 @@ import styles from './styles.css';
 import Footer from 'components/Footer';
 import Base from 'components/Pages/Base';
 import { getUrlParam } from 'helpers/url';
-import jwtDecode from 'jwt-decode';
+import Cookies from 'js-cookie';
+import { withRouter } from 'react-router-dom';
 
-class Authenticate extends Component<{}>
+type Props = {
+  history: Object,
+};
+
+class Authenticate extends Component<Props>
 {
   /**
    * When the component mounted
@@ -21,9 +26,9 @@ class Authenticate extends Component<{}>
       return;
     }
 
-    const decodedToken = jwtDecode(token);
+    Cookies.set('token', token, { expires: 30 });
 
-    console.log(decodedToken);
+    this.props.history.push('/');
   }
 
   /**
@@ -40,4 +45,4 @@ class Authenticate extends Component<{}>
   }
 }
 
-export default Base(Authenticate);
+export default withRouter(Base(Authenticate));
