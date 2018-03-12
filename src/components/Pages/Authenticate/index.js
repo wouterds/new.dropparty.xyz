@@ -5,6 +5,7 @@ import styles from './styles.css';
 import Footer from 'components/Footer';
 import Base from 'components/Pages/Base';
 import { getUrlParam } from 'helpers/url';
+import jwtDecode from 'jwt-decode';
 
 class Authenticate extends Component<{}>
 {
@@ -19,6 +20,10 @@ class Authenticate extends Component<{}>
       window.location = 'http://localhost/authenticate';
       return;
     }
+
+    const decodedToken = jwtDecode(token);
+
+    console.log(decodedToken);
   }
 
   /**
