@@ -21,6 +21,10 @@ class Landing extends Component<{}>
         </p>
 
         <p>There's no sign up, you can use your existing Dropbox account to use this service.</p>
+
+        <p>
+          <Link to='/authenticate' className={styles.button}>Sign in with Dropbox</Link>
+        </p>
       </div>
     );
   }
