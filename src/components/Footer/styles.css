@@ -1,6 +1,8 @@
 @import 'variables';
 
 .footer {
+  text-align: right;
+
   a {
     color: var(--color-blue);
     text-decoration: none;
