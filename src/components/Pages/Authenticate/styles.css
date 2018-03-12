@@ -1,6 +1,6 @@
 @import 'variables';
 
-.app {
+.landing {
   min-height: 100%;
   display: flex;
   flex-direction: column;

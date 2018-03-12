@@ -4,7 +4,7 @@ import type { Node } from 'react';
 import styles from './styles.css';
 import Footer from 'components/Footer';
 
-class App extends Component<{}>
+class Authenticate extends Component<{}>
 {
   /**
    * Render the component
@@ -13,14 +13,11 @@ class App extends Component<{}>
    */
   render(): Node {
     return (
-      <div className={styles.app}>
-        <main className={styles.content}>
-          Hello World
-        </main>
-        <Footer />
+      <div className={styles.authenticate}>
+          Signing you in..
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate;

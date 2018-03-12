@@ -1,11 +1,11 @@
 import path from 'path';
-import Express from 'express';
+import express from 'express';
 import ServeStatic from 'serve-static';
-import ReactApp from './app';
+import AppLoader from './app-loader';
 
-const express = Express();
+const app = express();
 
-express.use(ReactApp);
-express.use(ServeStatic(path.join(__dirname, './../public')));
+app.use(ServeStatic(path.join(__dirname, './../public')));
+app.use(AppLoader);
 
-express.listen(3000);
+app.listen(3000);

@@ -9,7 +9,7 @@ const production = process.env.NODE_ENV === 'production';
 
 config.target = 'node';
 config.externals = [NodeExternals()];
-config.entry = path.join(__dirname, './src/index.ssr.js');
+config.entry = path.join(__dirname, './src/app.jsx');
 config.output.path = path.join(__dirname, './public');
 config.output.filename = 'ssr.js';
 config.output.libraryTarget = 'commonjs2';
