@@ -2,4 +2,14 @@
 
 .footer {
   padding: 25px;
+
+  a {
+    color: var(--color-blue);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-blue);
+    }
+  }
 }
