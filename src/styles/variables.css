@@ -3,5 +3,7 @@
   --color-black: #000;
   --color-transparent: rgba(var(--color-white), 0);
 
-  --font-family-default: 'Myriad Pro', Helvetica, Arial, sans-serif;
+  --font-family-default: Hack, Menlo, Courier, monospace;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
 }

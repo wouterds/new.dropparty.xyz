@@ -1,3 +1,4 @@
 @import 'mixins';
 
-/* @mixin font-face Hack, Hack-Regular, var(--font-weight-regular); */
+@mixin font-face Hack, Hack-Regular, var(--font-weight-regular);
+@mixin font-face Hack, Hack-Bold, var(--font-weight-bold);
