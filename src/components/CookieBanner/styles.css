@@ -1,0 +1,35 @@
+@import 'variables';
+
+.cookieBanner {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  p {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    background: rgba(var(--color-white), 0.9);
+    color: var(--color-blue-darker);
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: var(--font-weight-bold);
+
+    @media (max-width: 820px) {
+      margin-top: 15px;
+    }
+
+    &:hover {
+      background: var(--color-white);
+    }
+  }
+}
