@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './styles.css';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import CookieBanner from 'components/CookieBanner';
 
 const Base = (WrappedComponent) => {
   class Base extends Component {
@@ -21,6 +22,8 @@ const Base = (WrappedComponent) => {
           <div className={styles.footer}>
             <Footer />
           </div>
+
+          <CookieBanner />
         </div>
       );
     }
