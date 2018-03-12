@@ -15,7 +15,7 @@ class Footer extends Component<{}>
   render(): Node {
     return (
       <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} dropparty.xyz
+        &copy; {new Date().getFullYear()} <a href="https://dropparty.xyz/">dropparty.xyz</a>
       </footer>
     );
   }
