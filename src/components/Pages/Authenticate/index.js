@@ -4,9 +4,23 @@ import type { Node } from 'react';
 import styles from './styles.css';
 import Footer from 'components/Footer';
 import Base from 'components/Pages/Base';
+import { getUrlParam } from 'helpers/url';
 
 class Authenticate extends Component<{}>
 {
+  /**
+   * When the component mounted
+   */
+  componentDidMount() {
+    const token = getUrlParam('token');
+
+    // Empty token?
+    if (!token) {
+      window.location = 'http://localhost/authenticate';
+      return;
+    }
+  }
+
   /**
    * Render the component
    *
@@ -15,7 +29,7 @@ class Authenticate extends Component<{}>
   render(): Node {
     return (
       <div className={styles.authenticate}>
-          Signing you in..
+        <p>Signing you in..</p>
       </div>
     );
   }
