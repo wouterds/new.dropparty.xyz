@@ -1,8 +1,6 @@
 @import 'variables';
 
 .footer {
-  padding: 25px;
-
   a {
     color: var(--color-blue);
     text-decoration: none;

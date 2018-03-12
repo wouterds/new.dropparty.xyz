@@ -1,11 +1,9 @@
 //@flow
 import React, { Component } from 'react';
 import type { Node } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './styles.css';
-import Base from 'components/Pages/Base';
 
-class Landing extends Component<{}>
+class Header extends Component<{}>
 {
   /**
    * Render the component
@@ -14,11 +12,12 @@ class Landing extends Component<{}>
    */
   render(): Node {
     return (
-      <div className={styles.landing}>
-
-      </div>
+      <header className={styles.header}>
+        <h1>Drop Party</h1>
+        <hr />
+      </header>
     );
   }
 }
 
-export default Base(Landing);
+export default Header;

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import type { Node } from 'react';
 import styles from './styles.css';
 import Footer from 'components/Footer';
+import Base from 'components/Pages/Base';
 
 class Authenticate extends Component<{}>
 {
@@ -20,4 +21,4 @@ class Authenticate extends Component<{}>
   }
 }
 
-export default Authenticate;
+export default Base(Authenticate);

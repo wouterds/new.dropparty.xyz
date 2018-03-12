@@ -1,0 +1,15 @@
+@import 'variables';
+
+.header {
+  h1 {
+    font-size: 2em;
+  }
+
+  hr {
+    border-color: var(--color-blue);
+    border-style: solid;
+    border-width: 2px;
+    max-width: 30px;
+    margin-top: 15px;
+  }
+}
