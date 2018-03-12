@@ -39,12 +39,14 @@ let config =  {
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style-loader', {
+        use: [
+          'style-loader',
+          {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: production ? '[hash:base64]' : '[name]-[local]-[hash:base64:5]',
+              localIdentName: production ? '[hash:8]' : '[name]-[local]-[hash:8]',
+              sourceMap: !production,
             },
           },
           'postcss-loader',
@@ -71,6 +73,17 @@ let config =  {
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, './public/index.html'),
       template: path.join(__dirname, './src/index.html'),
+      minify: {
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
     new LoaderOptionsPlugin({
       minimize: production,
