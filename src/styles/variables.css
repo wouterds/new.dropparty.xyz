@@ -2,6 +2,7 @@
   --color-white: #fff;
   --color-black: #000;
   --color-transparent: rgba(var(--color-white), 0);
+  --color-blue: #006eff;
 
   --font-family-default: Hack, Menlo, Courier, monospace;
   --font-weight-regular: 400;
