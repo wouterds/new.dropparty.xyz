@@ -16,7 +16,7 @@ class Download extends Component<{}>
     return (
       <div className={styles.download}>
         <p>
-          Download page
+          Download
         </p>
       </div>
     );
