@@ -25,25 +25,34 @@ class Landing extends Component<{}>
 
     return (
       <div className={styles.landing}>
+        <h2>What is Drop Party?</h2>
         <p>
-          Drop Party makes it easy to quickly share any file with anyone.
-          It can auto-upload screenshots, has support for short urls and full social media embedding support.
+          Drop Party is an extension to Dropbox to easily share files. While Dropbox has this functionality built in, I don't really like how it behaves. The preview is slow and often does not embed well in social media, chat apps and more. This is exactly what Drop Party solves.
+          <br />
+          <br />
+          And besides that it also comes with some extra functionality to view your shared files, stats on them like amount of views, downloads etc, short links, direct links, download links etc..
         </p>
 
         {!dropbox_account_id ? (
-          <p>
-            There's no sign up, you can use your existing Dropbox account to use this service.
-            <br />
-            <br />
-            <Link to='/authenticate' className={styles.button}>Sign in with Dropbox</Link>
-          </p>
+          <div className={styles.spacer}>
+            <h2>Sign in</h2>
+            <p>
+              There's no sign up, you can use your existing Dropbox account to sign in.
+              <br />
+              <br />
+              <Link to='/authenticate' className={styles.button}>Sign in with Dropbox</Link>
+            </p>
+          </div>
         ) : (
-          <p>
-            Still work in progress, but already a first downloadable alpha version for macOS.
-            <br />
-            <br />
-            <Link to='/download' className={styles.button}>Download</Link>
-          </p>
+          <div className={styles.spacer}>
+            <h2>Download</h2>
+            <p>
+              Still work in progress, but already a first downloadable alpha version for macOS.
+              <br />
+              <br />
+              <Link to='/download' className={styles.button}>Download</Link>
+            </p>
+          </div>
         )}
       </div>
     );

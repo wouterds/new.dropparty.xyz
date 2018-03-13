@@ -13,6 +13,14 @@
   padding: 25px;
 }
 
+.spacer {
+  margin-top: 25px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
 .button {
   background: var(--color-blue);
   color: var(--color-white);
