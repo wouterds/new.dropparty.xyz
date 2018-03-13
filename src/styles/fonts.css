@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 @mixin font-face Hack, Hack-Regular, var(--font-weight-regular);
 @mixin font-face Hack, Hack-Bold, var(--font-weight-bold);
