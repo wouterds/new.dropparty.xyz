@@ -1,15 +1,25 @@
 @import 'variables';
 
 .footer {
-  text-align: right;
+  overflow: hidden;
+
+  .left {
+    float: left;
+    text-align: left;
+  }
+
+  .right {
+    float: right;
+    text-align: right;
+  }
 
   a {
-    color: var(--color-black);
+    color: var(--color-blue);
     text-decoration: none;
 
     &:hover {
       color: var(--color-white);
-      background-color: var(--color-black);
+      background-color: var(--color-blue);
     }
   }
 }
