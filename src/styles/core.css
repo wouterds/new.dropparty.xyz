@@ -22,3 +22,8 @@ body,
   margin: 0 0.05em !important;
   vertical-align: -0.1em !important;
 }
+
+mark {
+  background: var(--color-blue);
+  color: var(--color-white);
+}

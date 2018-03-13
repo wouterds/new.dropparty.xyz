@@ -27,10 +27,10 @@ class Landing extends Component<{}>
       <div className={styles.landing}>
         <h2>What is Drop Party?</h2>
         <p>
-          Drop Party is an extension to Dropbox to easily share files. While Dropbox has this functionality built in, I don't really like how it behaves. The preview is slow and often does not embed well in social media, chat apps and more. This is exactly what Drop Party solves.
+          Drop Party is an <mark>extension to Dropbox to easily share files</mark>. While Dropbox has this functionality built in, I don't really like how it behaves. The preview is slow and often does not embed well in social media, chat apps and more. This is exactly what Drop Party solves.
           <br />
           <br />
-          And besides that it also comes with some extra functionality to view your shared files, stats on them like amount of views, downloads etc, short links, direct links, download links etc..
+          And besides that it also comes <mark>with some extra functionality</mark> to view your shared files, stats on them like amount of views, downloads etc, short links, direct links, download links etc..
         </p>
 
         {!dropbox_account_id ? (
