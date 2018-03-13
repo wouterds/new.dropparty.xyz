@@ -4,12 +4,12 @@
   text-align: right;
 
   a {
-    color: var(--color-blue);
+    color: var(--color-black);
     text-decoration: none;
 
     &:hover {
       color: var(--color-white);
-      background-color: var(--color-blue);
+      background-color: var(--color-black);
     }
   }
 }
