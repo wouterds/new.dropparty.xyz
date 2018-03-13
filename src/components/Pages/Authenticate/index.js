@@ -22,7 +22,7 @@ class Authenticate extends Component<Props>
 
     // Empty token?
     if (!token) {
-      window.location = 'http://localhost/authenticate';
+      window.location = 'https://staging-api.dropparty.xyz/authenticate';
       return;
     }
 
