@@ -1,6 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import type { Node } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles.css';
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
@@ -40,7 +41,9 @@ class Header extends Component<{}, State>
     return (
       <header className={styles.header}>
         <div className={styles.left}>
-          <h1>Drop Party</h1>
+          <Link to='/'>
+            <h1>Drop Party</h1>
+          </Link>
           <hr />
         </div>
         {user ? (
