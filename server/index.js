@@ -11,7 +11,18 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(ServeStatic(path.join(__dirname, './../public')));
-app.use(AppLoader);
+// App with router
+const router = express.Router();
+router.get('/', AppLoader);
 
+// App
+app.use('/', router);
+
+// Static files
+app.use(ServeStatic(path.join(__dirname, './../public')));
+
+// Fallback
+app.use('/', AppLoader);
+
+// Start express and listen on port 3000
 app.listen(3000);
