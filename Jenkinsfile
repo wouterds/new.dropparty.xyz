@@ -18,7 +18,7 @@ node {
     }
 
     stage('Dependencies') {
-      sh 'make vendor'
+      sh 'make node_modules'
     }
 
     stage('Build') {
