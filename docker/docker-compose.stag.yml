@@ -5,14 +5,14 @@ services:
     image: docker.wouterdeschuyter.be/internal-dropparty-website-node
     restart: unless-stopped
     container_name: internal-dropparty-website-node
-  environment:
-    - VIRTUAL_HOST=staging.dropparty.xyz
-    - VIRTUAL_PORT=3000
-    - LETSENCRYPT_HOST=staging.dropparty.xyz
-    - LETSENCRYPT_EMAIL=wouter.de.schuyter@gmail.com
-  networks:
-    - default
-    - nginxproxy_default
+    environment:
+      - VIRTUAL_HOST=staging.dropparty.xyz
+      - VIRTUAL_PORT=3000
+      - LETSENCRYPT_HOST=staging.dropparty.xyz
+      - LETSENCRYPT_EMAIL=wouter.de.schuyter@gmail.com
+    networks:
+      - default
+      - nginxproxy_default
 
 networks:
   nginxproxy_default:
