@@ -15,9 +15,6 @@ class Download extends Component<{}>
   render(): Node {
     return (
       <div className={styles.download}>
-        <p>
-          Download
-        </p>
       </div>
     );
   }
