@@ -26,10 +26,12 @@ node_modules: package.json
 
 .build-app: node_modules
 	docker run --rm --volume=$(PWD):/code -w=/code node:9-alpine npm install
-
-.build-node: node_modules $(DOCKERFILE_NODE)
 	docker run --rm --volume=$(PWD):/code -w=/code node:9-alpine npm run build
 	docker run --rm --volume=$(PWD):/code -w=/code node:9-alpine npm run ssr
+	touch .build-app
+
+.build-node: node_modules $(DOCKERFILE_NODE)
+	docker build $(BUILD_NO_CACHE) -f $(DOCKERFILE_NODE) -t $(TAG_NODE) .
 	touch .build-node
 
 build: node_modules .build-app .build-node
