@@ -15,8 +15,13 @@ class Landing extends Component<{}>
    * @returns {Node}
    */
   render(): Node {
-    const decodedToken = jwtDecode(Cookies.get('token'));
-    const { dropbox_account_id } = decodedToken;
+    let dropbox_account_id = null;
+
+    if (Cookies.get('token')) {
+      const decodedToken = jwtDecode(Cookies.get('token'));
+      dropbox_account_id = decodedToken.dropbox_account_id;
+    }
+
 
     return (
       <div className={styles.landing}>
