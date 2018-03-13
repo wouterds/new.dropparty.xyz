@@ -4,6 +4,8 @@ import type { Node } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.css';
 import Base from 'components/Pages/Base';
+import Cookies from 'js-cookie';
+import jwtDecode from 'jwt-decode';
 
 class Landing extends Component<{}>
 {
@@ -13,6 +15,9 @@ class Landing extends Component<{}>
    * @returns {Node}
    */
   render(): Node {
+    const decodedToken = jwtDecode(Cookies.get('token'));
+    const { dropbox_account_id } = decodedToken;
+
     return (
       <div className={styles.landing}>
         <p>
@@ -20,11 +25,21 @@ class Landing extends Component<{}>
           It can auto-upload screenshots, has support for short urls and full social media embedding support.
         </p>
 
-        <p>There's no sign up, you can use your existing Dropbox account to use this service.</p>
-
-        <p>
-          <Link to='/authenticate' className={styles.button}>Sign in with Dropbox</Link>
-        </p>
+        {!dropbox_account_id ? (
+          <p>
+            There's no sign up, you can use your existing Dropbox account to use this service.
+            <br />
+            <br />
+            <Link to='/authenticate' className={styles.button}>Sign in with Dropbox</Link>
+          </p>
+        ) : (
+          <p>
+            Still work in progress, but already a first downloadable alpha version for macOS.
+            <br />
+            <br />
+            <Link to='/download' className={styles.button}>Download</Link>
+          </p>
+        )}
       </div>
     );
   }
