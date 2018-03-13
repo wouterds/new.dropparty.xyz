@@ -40,8 +40,8 @@ class Header extends Component<{}, State>
     return (
       <header className={styles.header}>
         <div className={styles.left}>
-            <h1>Drop Party</h1>
-            <hr />
+          <h1>Drop Party</h1>
+          <hr />
         </div>
         {user ? (
           <div className={styles.right}>
