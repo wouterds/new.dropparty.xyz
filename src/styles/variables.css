@@ -2,6 +2,8 @@
   --color-white: #fff;
   --color-black: #000;
   --color-transparent: rgba(var(--color-white), 0);
+  --color-transparent-gray: #F4FAFF;
+  --color-gray: #413e5c;
   --color-blue: #006eff;
   --color-blue-darker: #0062e3;
 
