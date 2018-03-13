@@ -22,7 +22,7 @@ const AppLoader = (request, response) => {
     });
 
     const [head, tail] = file.split('<!-- react-app -->');
-    const reactElement = React.createElement(ReactApp, { history: history, });
+    const reactElement = React.createElement(ReactApp, { history: history });
     const stream = renderToNodeStream(reactElement);
 
     response.write(head);
