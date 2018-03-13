@@ -1,6 +1,32 @@
 @import 'variables';
 
 .header {
+  display: flex;
+  flex-direction: row;
+
+  .left,
+  .right {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .right {
+    text-align: right;
+    font-size: 0.9em;
+    line-height: 2;
+
+    .name {
+      color: var(--color-blue-darker);
+    }
+
+    .email {
+      color: #a0a5bd;
+      font-size: 0.8em;
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+
   h1 {
     font-size: 2em;
   }
