@@ -4,7 +4,7 @@
 @import 'fonts';
 
 body {
-  background: var(--color-transparent-gray);
+  background: var(--color-dirty-white);
   font-family: var(--font-family-default);
   color: var(--color-gray);
   font-size: 1.4em;

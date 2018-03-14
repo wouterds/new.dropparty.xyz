@@ -2,12 +2,14 @@
 import React, { Component } from 'react';
 import type { Node } from 'react';
 import { Link } from 'react-router-dom';
+import HeaderActions from './Actions';
 import styles from './styles.css';
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
 
 type State = {
   user: ?Object,
+  showActions: boolean,
 };
 
 class Header extends Component<{}, State>
@@ -28,15 +30,25 @@ class Header extends Component<{}, State>
 
     this.state = {
       user,
+      showActions: false,
     };
   }
+
+  toggleActions() {
+    const { showActions } = this.state;
+
+    this.setState({
+      showActions: !showActions,
+    });
+  }
+
   /**
    * Render the component
    *
    * @returns {Node}
    */
   render(): Node {
-    const { user } = this.state;
+    const { user, showActions } = this.state;
 
     return (
       <header className={styles.header}>
@@ -48,13 +60,18 @@ class Header extends Component<{}, State>
         </div>
         {user ? (
           <div className={styles.right}>
-            <div className={styles.info}>
-              <div className={styles.name}>{user.first_name} {user.name}</div>
-              <div className={styles.email}>{user.email}</div>
+            <div className={styles.row}>
+              <div className={styles.info}>
+                <div className={styles.name}>{user.first_name} {user.name}</div>
+                <div className={styles.email}>{user.email}</div>
+              </div>
+              <button className={styles.buttonMore} onClick={() => this.toggleActions()}>
+                <i className="material-icons">more_horiz</i>
+              </button>
             </div>
-            <button className={styles.buttonMore}>
-              <i className="material-icons">more_horiz</i>
-            </button>
+            <div className={styles.row}>
+              <HeaderActions show={showActions} />
+            </div>
           </div>
         ) : null}
       </header>
