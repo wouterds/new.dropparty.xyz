@@ -36,7 +36,7 @@ config.module.rules.push({
         options: {
           modules: true,
           importLoaders: 1,
-          localIdentName: production ? '[hash:base64]' : '[name]-[local]-[hash:8]',
+          localIdentName: production ? '[hash:8]' : '[name]-[local]-[hash:8]',
           sourceMap: !production,
         },
       },
