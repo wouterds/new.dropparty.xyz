@@ -11,3 +11,32 @@
   display: flex;
   padding: 25px;
 }
+
+textarea {
+  border: 1px dashed var(--color-gray);
+  background: var(--color-white);
+  padding: 5px;
+  line-height: 1.8;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  display: block;
+
+  &:focus {
+    border-color: var(--color-blue);
+  }
+}
+
+.button {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 0 15px rgba(var(--color-gray), 0.2);
+
+  &:hover {
+    background: var(--color-blue-darker);
+  }
+}
