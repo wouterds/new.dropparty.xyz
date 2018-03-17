@@ -17,7 +17,7 @@ type State = {
   token: ?string,
 };
 
-class Authenticate extends Component<Props, State>
+class Auth extends Component<Props, State>
 {
   constructor() {
     super(...arguments);
@@ -42,7 +42,7 @@ class Authenticate extends Component<Props, State>
 
     // Empty token?
     if (!token) {
-      window.location = 'https://staging-api.dropparty.xyz/authenticate';
+      window.location = 'https://staging-api.dropparty.xyz/auth';
       return;
     }
 
@@ -66,7 +66,7 @@ class Authenticate extends Component<Props, State>
     const { token } = this.state;
 
     return (
-      <div className={styles.authenticate}>
+      <div className={styles.auth}>
         {token ? (
           <div>
             <h2>Sign in</h2>
@@ -90,4 +90,4 @@ class Authenticate extends Component<Props, State>
   }
 }
 
-export default withRouter(Base(Authenticate));
+export default withRouter(Base(Auth));

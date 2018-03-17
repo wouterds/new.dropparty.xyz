@@ -8,7 +8,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { Route, Switch } from 'react-router-dom';
 
 import Landing from 'components/Pages/Landing';
-import Authenticate from 'components/Pages/Authenticate';
+import Auth from 'components/Pages/Auth';
 import SignOut from 'components/Pages/SignOut';
 import Download from 'components/Pages/Download';
 
@@ -33,7 +33,7 @@ class App extends Component<Props>
         <ConnectedRouter history={history ? history : createBrowserHistory()}>
           <ConnectedSwitch>
             <Route exact path='/' component={Landing} />
-            <Route path='/authenticate' component={Authenticate} />
+            <Route path='/auth' component={Auth} />
             <Route path='/sign-out' component={SignOut} />
             <Route path='/download' component={Download} />
           </ConnectedSwitch>
