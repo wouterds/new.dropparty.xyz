@@ -32,8 +32,7 @@ class Auth extends Component<Props, State>
   componentDidMount() {
     const token = getUrlParam('token');
 
-    let show = !!getUrlParam('show');
-
+    let show = getUrlParam('show') === 'true';
     if (!show) {
       show = Cookies.get('show');
     }
