@@ -4,12 +4,16 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 import ServeStatic from 'serve-static';
 import AppLoader from './app-loader';
+import FileApiProxy from './file-api-proxy';
 
 const app = express();
 
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// View a file
+app.use('/direct/:id', FileApiProxy);
 
 // App with router
 const router = express.Router();
